@@ -5,9 +5,10 @@ var weather = require('./lib/weather/weather.js');
 
 var app = express();
 
-app.get('/', function (req, res) {
-    var cityData = weather.WeatherObj.getCity('4671654');
-    res.send(helpers.parseCode(cityData));
+app.get('/city/:cityId', function (req, res) {
+    var cityData = weather.WeatherObj.getCity(req.params.cityId);
+    var weatherIcon = helpers.parseCode(cityData);
+    res.send(helpers.weatherMapping(weatherIcon));
 });
 
 var server = app.listen(3000, function () {
