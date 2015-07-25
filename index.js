@@ -1,12 +1,13 @@
 var $ = require('jquery');
 var express = require('express');
+var helpers = require('./lib/utils/helpers.js');
 var weather = require('./lib/weather/weather.js');
 
 var app = express();
 
 app.get('/', function (req, res) {
-    var test = weather.WeatherObj.getCity('4671654');
-    res.send(test);
+    var cityData = weather.WeatherObj.getCity('4671654');
+    res.send(helpers.parseCode(cityData));
 });
 
 var server = app.listen(3000, function () {
