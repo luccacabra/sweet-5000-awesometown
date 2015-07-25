@@ -1,16 +1,12 @@
-var $ = require('jquery');
 var express = require('express');
-var helpers = require('./lib/utils/helpers.js');
-var weather = require('./lib/weather/weather.js');
+var job = require('./lib/job.js');
 var worker = require('./lib/worker.js');
 
 var app = express();
+job.austinJob.schedule();
 
 app.get('/city/:cityId', function (req, res) {
-    var cityData = weather.WeatherObj.getCity(req.params.cityId);
-    var weatherIcon = helpers.parseCode(cityData);
-    var weatherCode = helpers.weatherMapping(weatherIcon);
-    worker.weatherStation(weatherCode);
+    var weatherCode = worker.reactToCity(req.params.cityId);
     res.send(weatherCode);
 });
 

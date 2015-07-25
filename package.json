@@ -9,6 +9,7 @@
   ],
   "dependencies": {
     "express": "4.13.1",
+    "node-schedule": "0.2.9",
     "johnny-five": "^0.8.85",
     "js-beautify": "^1.5.7",
     "jquery": "2.1.4",
