@@ -1,20 +1,18 @@
-define([
-    'jquery',
-    'express'
-], function (
-    $,
-    express
-) {
-    var app = express();
+var $ = require('jquery');
+var express = require('express');
+var weather = require('./lib/weather/weather.js');
 
-    app.get('/', function (req, res) {
-        res.send('Hello World!');
-    });
+var app = express();
 
-    var server = app.listen(3000, function () {
-        var host = server.address().address;
-        var port = server.address().port;
+app.get('/', function (req, res) {
+    var test = weather.WeatherObj.getCity('4671654');
+    res.send(test);
+});
 
-        console.log('Example app listening at http://%s:%s', host, port);
-    });
+var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+
+    console.log('Example app listening at http://%s:%s', host, port);
 });
