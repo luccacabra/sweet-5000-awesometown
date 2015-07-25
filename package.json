@@ -13,5 +13,8 @@
   ],
   "requirements": {
     "request": "*"
+  },
+  "devDependencies": {
+    "johnny-five": "^0.8.85"
   }
 }
