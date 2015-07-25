@@ -4,18 +4,29 @@
   "description": "weather and shit",
   "author": "Jessica Lucci <jlucci@rmn.com>",
   "contributors": [
-    {
-      "name": "Casey Hunt"
-    },
-    {
-      "name": "Eddie Saenz"
-    }
+    "Casey Hunt",
+    "Eddie Saenz"
   ],
   "dependencies": {
+    "express": "4.13.1",
     "johnny-five": "^0.8.85",
     "js-beautify": "^1.5.7",
-    "jquery": "*",
-    "request": "*",
+    "jquery": "2.1.4",
+    "request": "2.60.0",
     "requirejs": "^2.1.11"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicalucci/sweet-5000-awesometown.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicalucci/sweet-5000-awesometown/issues"
+  },
+  "homepage": "https://github.com/jessicalucci/sweet-5000-awesometown#readme"
 }
