@@ -11,10 +11,11 @@
       "name": "Eddie Saenz"
     }
   ],
-  "requirements": {
-    "request": "*"
-  },
-  "devDependencies": {
-    "johnny-five": "^0.8.85"
+  "dependencies": {
+    "johnny-five": "^0.8.85",
+    "js-beautify": "^1.5.7",
+    "jquery": "*",
+    "request": "*",
+    "requirejs": "^2.1.11"
   }
 }
