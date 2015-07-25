@@ -1,0 +1,17 @@
+{
+  "name": "sweet-5000-awesometown",
+  "version": "1.0.0",
+  "description": "weather and shit",
+  "author": "Jessica Lucci <jlucci@rmn.com>",
+  "contributors": [
+    {
+      "name": "Casey Hunt"
+    },
+    {
+      "name": "Eddie Saenz"
+    }
+  ],
+  "requirements": {
+    "request": "*"
+  }
+}
